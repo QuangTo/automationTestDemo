@@ -1,6 +1,11 @@
-
+import { BASE_URL } from "./util";
 fixture('Test')
-  .page('https://react-redux.realworld.io/#/register?_k=8rbebk');
-test('test1', async => {
+  .page(`${BASE_URL}/#/register?_k=8rbebk`);
+
+  test('Verify that the user can create an account successfully', async() => {
+  //
+});
+
+test('Verify that a user cannot log in when entering a wrong email address or password', async() => {
   //
 });
