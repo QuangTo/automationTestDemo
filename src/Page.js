@@ -3,7 +3,7 @@ import { Selector, t } from "testcafe"
 export const Page = {
 
    enterUserName: async(user)=>{
-    const userName = Selector('input').withAttribute('placeholder','UserName');
+    const userName = Selector('input').withAttribute('placeholder','Username');
     await t.typeText(userName, user);
    },
 

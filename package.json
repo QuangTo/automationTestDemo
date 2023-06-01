@@ -19,5 +19,8 @@
   "homepage": "https://github.com/QuangTo/test#readme",
   "dependencies": {
     "testcafe": "^2.6.2"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.0.2"
   }
 }
