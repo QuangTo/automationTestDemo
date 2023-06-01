@@ -1,28 +1,34 @@
-export const Page ={
+import { Selector, t } from "testcafe"
 
-   enterUserName: async()=>{
+export const Page = {
 
+   enterUserName: async(user)=>{
+    const userName = Selector('input').withAttribute('placeholder','UserName');
+    await t.typeText(userName, user);
    },
 
-   enterEmail: async()=>{
-
+   enterEmail: async(email)=>{
+    const emailInput = Selector('input').withAttribute('placeholder','Email');
+    await t.typeText(emailInput, email);
    },
 
-   enterPassWord: async()=>{
-
+   enterPassWord: async(pwd)=>{
+    const password = Selector('input').withAttribute('placeholder','Password');
+    await t.typeText(password, pwd);
    },
 
    clickSignIn: async()=>{
-
+    const button = Selector('button').withText('Sign in');
+    await t.click(button);
    },
 
-   successfullMessage: async()=>{
-
+   homePage: async()=>{
+    const newFeed = Selector('a').withText('Your Feed');
+    await t.expect(newFeed.exists).ok();
    },
 
-   errorMessage: async()=>{
-    
+   seeErrorMessage: async()=>{
+    const errorMsg = Selector('.error-messages');
+    await t.expect(errorMsg.exists).ok();
    }
-
-
 } 

@@ -1,11 +1,21 @@
 import { BASE_URL } from "./util";
-fixture('Test')
-  .page(`${BASE_URL}/#/register?_k=8rbebk`);
+import { Page } from "./Page";
 
-  test('Verify that the user can create an account successfully', async() => {
+fixture('Test')
+  .page(`${BASE_URL}`);
+
+test.before(async t => {
+  await t.navigateTo(`/#/register`);
+})('Verify that the user can create an account successfully', async() => {
   //
 });
 
-test('Verify that a user cannot log in when entering a wrong email address or password', async() => {
-  //
+test.before(async t => {
+  await t.navigateTo(`/#/login`);
+})
+('Verify that a user cannot log in when entering a wrong email address or password', async() => {
+  await Page.enterEmail('wronguserEmail@gmail.com');
+  await Page.enterPassWord('wrongPassword');
+  await Page.clickSignIn();
+  await Page.seeErrorMessage();
 });
