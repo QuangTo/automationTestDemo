@@ -22,7 +22,7 @@ export const Page = {
     await t.click(button);
    },
 
-   homePage: async()=>{
+   seeHomePage: async()=>{
     const newFeed = Selector('a').withText('Your Feed');
     await t.expect(newFeed.exists).ok();
    },
