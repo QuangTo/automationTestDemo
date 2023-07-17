@@ -1,0 +1,1 @@
+// declare for login page or inherit from others

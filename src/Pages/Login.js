@@ -1,6 +1,6 @@
 import { Selector, t } from "testcafe"
 
-export const Page = {
+export const Login = {
 
    enterUserName: async(user)=>{
     const userName = Selector('input').withAttribute('placeholder','Username');
