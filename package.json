@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:chrome": "testcafe chrome src/test.js",
-    "test:firefox": "testcafe firefox src/test.js"
+    "test:chrome": "testcafe chrome src/SystemTest/**.spec.js",
+    "test:firefox": "testcafe firefox src/SystemTest/**.spec.js"
   },
   "repository": {
     "type": "git",
