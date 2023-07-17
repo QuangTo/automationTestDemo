@@ -1,5 +1,5 @@
 
-### Demo test automation by using testcafe framework
+### Demo test use testcafe framework
 * Gherkin language syntax
 * Page object model
 * API test & Postman
