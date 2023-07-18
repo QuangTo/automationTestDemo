@@ -23,3 +23,7 @@ test.before(async t => {
   await Login.clickSignIn();
   await Login.seeErrorMessage();
 });
+
+test.before(async t => {
+  await t.navigateTo(`/#/login`);
+})
