@@ -6,7 +6,7 @@ fixture('Test')
 
 test.before(async t => {
   await t.navigateTo(`/#/register`);
-})('Verify that the user can create an account successfully', async() => {
+})('Verify that the user can create an account successfully', async () => {
   await Login.enterUserName(uniqueUserName);
   await Login.enterEmail(uniqueEmail);
   await Login.enterPassWord(uniquePassword);
@@ -17,13 +17,10 @@ test.before(async t => {
 test.before(async t => {
   await t.navigateTo(`/#/login`);
 })
-('Verify that a user cannot log in when entering a wrong email address or password', async() => {
-  await Login.enterEmail('wronguserEmail@gmail.com');
-  await Login.enterPassWord('wrongPassword');
-  await Login.clickSignIn();
-  await Login.seeErrorMessage();
-});
+  ('Verify that a user cannot log in when entering a wrong email address or password', async () => {
+    await Login.enterEmail('wronguserEmail@gmail.com');
+    await Login.enterPassWord('wrongPassword');
+    await Login.clickSignIn();
+    await Login.seeErrorMessage();
+  });
 
-test.before(async t => {
-  await t.navigateTo(`/#/login`);
-})

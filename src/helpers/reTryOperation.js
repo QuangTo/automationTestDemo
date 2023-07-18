@@ -25,6 +25,12 @@ export function getAPI(url, jwt, getData) {
     }, 1000, 5)
 }
 
+export function postAPI(url, jwt, getData) {
+    return reTryOperation(async => {
+        // function await get.method
+    }, 1000, 5)
+}
+
 // sample for finding selector 
 
 export function findSelector(selector) {
