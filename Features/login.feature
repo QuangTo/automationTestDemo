@@ -11,6 +11,6 @@ And I am automatically redirect to Home page
 
 Scenario: Login failed due to incorrect account 
 Given my account doesnt exist in system
-When I input it 
+When I input into the form
 And click Login 
 Then I see error message "xxxxx"
