@@ -1,7 +1,7 @@
 import { t } from 'testcafe';
 import { API } from '../state/api.js';
 
-fixture(`Test user api`);
+fixture(`Test login api`);
 
 test('Existing user login successfully', async () => {
     const res = await API.auth();
