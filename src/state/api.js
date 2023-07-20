@@ -1,23 +1,18 @@
 import { t } from 'testcafe';
-import { auth, baseAPI } from '../api/base';
-import { BASE_API, uniqueEmail, uniquePassword, uniqueUserName } from '../helpers/util';
-
-// user credential
-const data = {
-    user: {
-        email: "123qwesad123@gmail.com",
-        password: "123qwesad123@gmail.com"
-    }
-}
+import { auth, client } from './base.js';
+import { Credentials } from './credentials.js';
+import { BASE_API_URL, uniqueEmail, uniquePassword, uniqueUserName } from '../helpers/util.js';
 
 export const API = {
     auth: async () => {
-        const authResponse = await auth(data);
+        const authResponse = await auth(Credentials.userLogin);
         const { token } = authResponse;
         t.ctx.token = token;
+        console.log('Login auth success with code status is: ', authResponse.res.status);
         return authResponse;
     },
     registerUser: async () => {
+        const jwt = '';
         const data = {
             user: {
                 email: uniqueEmail,
@@ -25,9 +20,11 @@ export const API = {
                 username: uniqueUserName
             }
         };
-        return await baseAPI.post(`${BASE_API}/users`, data);
+        const resData = await client.post(`${BASE_API_URL}/api/users`, jwt, data);
+        console.log("Register successfully with status: ", resData.status);
+        return resData;
     },
     getUserInfo: async (jwt) => {
-        return await baseAPI.post(`${BASE_API}/users`, jwt);
+        return await client.post(`${BASE_API_URL}/users`, jwt);
     }
 }

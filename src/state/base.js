@@ -1,14 +1,14 @@
 // api source : https://github.com/gothinkster/realworld/blob/main/api/openapi.yml
 
 import axios from 'axios'
-import { BASE_API } from '../helpers/util'
+import { BASE_API_URL } from '../helpers/util'
 
 const buildHeader = (JWT) => (JWT ? { Authorization: `Token ${JWT}` } : {});
 
 export const auth = async (data = {}) => {
     try {
         const res = await axios.post(
-            `${BASE_API}/api/users/login`,
+            `${BASE_API_URL}/api/users/login`,
             data,
             {
                 headers: {
@@ -24,7 +24,7 @@ export const auth = async (data = {}) => {
     }
 }
 
-export const baseAPI = {
+export const client = {
     get: async (endpoint, jwt) => {
         const header = buildHeader(jwt);
         try {

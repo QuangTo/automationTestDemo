@@ -6,6 +6,7 @@
   "scripts": {
     "test:chrome": "testcafe chrome src/e2e/**.spec.js",
     "test:chrome-headless": "testcafe chrome:headless src/e2e/**.spec.js",
+    "test:api_chrome-headless": "testcafe chrome:headless src/api/**.spec.js",
     "test:firefox": "testcafe firefox src/e2e/**.spec.js"
   },
   "repository": {
