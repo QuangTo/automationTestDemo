@@ -2,7 +2,8 @@
 ### Demo test use testcafe framework
 * Gherkin language syntax
 * Page object model
-* API test & Postman
+* API test
+* GithubCI
 
 ### How to run the test 
 Install testcafe
