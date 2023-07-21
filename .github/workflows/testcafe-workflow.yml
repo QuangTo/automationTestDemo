@@ -4,7 +4,7 @@ on: [push]
 jobs:
   test:
     name: Run testcafe
-    runs-on: macos-latest
+    runs-on: windows-latest
     steps: 
       - name: Check repo
         uses: actions/checkout@v1
