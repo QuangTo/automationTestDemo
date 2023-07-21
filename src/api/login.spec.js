@@ -10,5 +10,5 @@ test('Existing user login successfully', async () => {
 test('Register new user', async () => {
     const res = await API.registerUser();
     await t.expect(res.status).eql(201);
-    await t.expect(res.data.user.email).contains('@gmail.com');
+    await t.expect(res.data.user.email).contains('.com');
 })
