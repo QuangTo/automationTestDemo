@@ -7,7 +7,8 @@
     "test:chrome": "testcafe chrome src/e2e/**.spec.js",
     "test:chrome-headless": "testcafe chrome:headless src/e2e/**.spec.js",
     "test:api_chrome-headless": "testcafe chrome:headless src/api/**.spec.js",
-    "test:firefox": "testcafe firefox src/e2e/**.spec.js"
+    "test:firefox": "testcafe firefox src/e2e/**.spec.js",
+    "test:accessibility": "testcafe chrome accessibilityTest/**.spec.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,11 @@
   },
   "homepage": "https://github.com/QuangTo/test#readme",
   "dependencies": {
+    "@testcafe-community/axe": "^3.5.0",
+    "axe-html-reporter": "^2.2.3",
     "axios": "^1.4.0",
+    "i": "^0.3.7",
+    "npm": "^9.8.1",
     "testcafe": "^2.6.2"
   },
   "devDependencies": {
