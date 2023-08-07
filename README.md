@@ -7,6 +7,17 @@
 [GithubCI](.github/workflows/testcafe-workflow.yml)
 
 
+### Page Object Model
+
+The POM is a recommended standard for front end testing. Deeper dive
+
+[POM Testcafe](https://testcafe.io/documentation/402836/guides/basic-guides/best-practices#use-of-page-objects)
+
+[POM WebdriverIO](https://webdriver.io/docs/pageobjects/)
+
+[POM Selenium](https://www.guru99.com/page-object-model-pom-page-factory-in-selenium-ultimate-guide.html)
+
+
 ### Test Model 
 Build as lib and it can trigger and run on CI or local 
 ....
