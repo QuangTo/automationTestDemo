@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:chrome": "testcafe chrome src/e2e/**.spec.js",
-    "test:chrome-headless": "testcafe chrome:headless src/e2e/**.spec.js",
-    "test:api_chrome-headless": "testcafe chrome:headless src/api/**.spec.js",
-    "test:firefox": "testcafe firefox src/e2e/**.spec.js"
+    "test:chrome": "testcafe chrome test/e2e/**.spec.js",
+    "test:chrome-headless": "testcafe chrome:headless test/e2e/**.spec.js",
+    "test:api_chrome-headless": "testcafe chrome:headless test/api/**.spec.js",
+    "test:firefox": "testcafe firefox test/e2e/**.spec.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
   "homepage": "https://github.com/QuangTo/test#readme",
   "dependencies": {
     "axios": "^1.4.0",
-    "testcafe": "^2.6.2"
+    "testcafe": "^3.4.0"
   },
   "devDependencies": {
     "@faker-js/faker": "^8.0.2"

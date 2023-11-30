@@ -1779,6 +1779,20 @@ var ExprRawGen = {
         _.js += '`';
     },
 
+    StaticBlock: function generateStaticBlock ($expr) {
+        var $body     = $expr.body,
+            bodyCount = $body.length;
+
+        _.js += 'static ';
+        _.js += '{' + _.newline;
+
+        for (var i = 0; i < bodyCount; ++i) {
+            StmtGen[$body[i].type]($body[i], Preset.e5);
+        }
+
+        _.js += _.newline + _.indent + '}';
+    },
+
     Super: function generateSuper () {
         _.js += 'super';
     }
